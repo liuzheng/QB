@@ -31,10 +31,10 @@
         </tr>
         <tr ng-repeat="e in edoc">
             <td><a ng-href="{{e.user_id}}"><img ng-src="{{e.im}}" class="img-circle" style="width: 60px"/></a><br/>{{e.user}}
-                <div id="{{e.id}}">
-                    <button ng-click="good(e.id)">good</button>
-                    <button ng-click="bad(e.id)">bad</button>
-                    <button ng-click="gun(e.id)">gun</button>
+                <div id="{{e.id}}"><br/>
+                    <a href="" ng-click="good(e.id)"><span class="glyphicon glyphicon-thumbs-up"></span>   </a>
+                    <a href="" ng-click="bad(e.id)"><span class="glyphicon glyphicon-thumbs-down"></span>   </a>
+                    <a href="" ng-click="gun(e.id)"><span class="glyphicon glyphicon-trash"></span>   </a>
                 </div>
             </td>
             <td><a ng-href="{{e.img}}"><img ng-src="{{e.img}}" class="img-rounded" style="width: 250px"/></a></td>
