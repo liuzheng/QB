@@ -11,15 +11,16 @@
 </head>
 <body style="width:750px;height: 1200px" class="container" ng-controller="ED">
 <!--<div class="col-xs-12">-->
-    <!--<b>Input value to Encode or Decode:</b>-->
-    <!--<textarea id="Source" rows="7" class="form-control" ng-model="code" style="resize: none;"></textarea>-->
+<!--<b>Input value to Encode or Decode:</b>-->
+<!--<textarea id="Source" rows="7" class="form-control" ng-model="code" style="resize: none;"></textarea>-->
 <!--</div>-->
 <!--<div class="col-xs-12">{{edoc}}</div>-->
 
 <div class="col-xs-12 navbar-fixed-top" style="text-align:center;">
     <!--<button class="btn btn-warning" ng-click="base64encode()">Base64 Encode</button>-->
     <!--<button class="btn btn-danger" ng-click="base64decode()">Base64 Decode</button>-->
-    <button class="btn btn-warning " ng-click="json()">麻辣烫</button>{{i}}
+    <button class="btn btn-warning " ng-click="json()">麻辣烫</button>
+    {{i}}
 </div>
 <div id="top" class="col-xs-12" style="padding: 50px">
     <table class="table">
@@ -29,8 +30,14 @@
             <td>content</td>
         </tr>
         <tr ng-repeat="e in edoc">
-            <td><a ng-href="{{e.user_id}}"><img ng-src="{{e.im}}" class="img-circle" style="width: 60px"/></a><br/>{{e.user}}</td>
-            <td><img ng-src="{{e.img}}" class="img-rounded" style="width: 250px"/></td>
+            <td><a ng-href="{{e.user_id}}"><img ng-src="{{e.im}}" class="img-circle" style="width: 60px"/></a><br/>{{e.user}}
+                <div id="{{e.id}}">
+                    <button ng-click="good(e.id)">good</button>
+                    <button ng-click="bad(e.id)">bad</button>
+                    <button ng-click="gun(e.id)">gun</button>
+                </div>
+            </td>
+            <td><a ng-href="{{e.img}}"><img ng-src="{{e.img}}" class="img-rounded" style="width: 250px"/></a></td>
             <td>{{e.content}}</td>
         </tr>
     </table>
